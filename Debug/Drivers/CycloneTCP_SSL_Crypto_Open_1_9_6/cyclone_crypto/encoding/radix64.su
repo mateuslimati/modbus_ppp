@@ -1,0 +1,2 @@
+radix64.c:72:6:radix64Encode	40	static
+radix64.c:184:9:radix64Decode	48	static

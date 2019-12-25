@@ -1,0 +1,3 @@
+smtp_client_auth.c:52:9:smtpClientLoginAuth	40	static
+smtp_client_auth.c:216:9:smtpClientPlainAuth	48	static
+smtp_client_auth.c:321:9:smtpClientCramMd5Auth	24	static

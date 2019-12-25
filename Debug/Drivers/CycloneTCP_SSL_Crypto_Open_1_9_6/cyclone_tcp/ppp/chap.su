@@ -1,0 +1,13 @@
+chap.c:57:9:chapStartAuth	16	static
+chap.c:91:9:chapAbortAuth	16	static
+chap.c:110:6:chapTick	24	static
+chap.c:149:6:chapProcessPacket	24	static
+chap.c:218:9:chapProcessChallenge	128	static
+chap.c:273:9:chapProcessResponse	32	static
+chap.c:388:9:chapProcessSuccess	24	static
+chap.c:445:9:chapProcessFailure	24	static
+chap.c:480:9:chapSendChallenge	40	static
+chap.c:562:9:chapSendResponse	40	static
+chap.c:619:9:chapSendSuccess	40	static
+chap.c:665:9:chapSendFailure	40	static
+chap.c:712:8:chapCheckPassword	120	static

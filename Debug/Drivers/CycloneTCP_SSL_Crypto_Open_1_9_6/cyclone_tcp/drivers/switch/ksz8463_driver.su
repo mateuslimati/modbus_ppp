@@ -1,0 +1,14 @@
+ksz8463_driver.c:75:9:ksz8463Init	24	static
+ksz8463_driver.c:168:8:ksz8463GetLinkState	24	static
+ksz8463_driver.c:216:6:ksz8463Tick	32	static
+ksz8463_driver.c:314:6:ksz8463EnableIrq	16	static
+ksz8463_driver.c:324:6:ksz8463DisableIrq	16	static
+ksz8463_driver.c:334:6:ksz8463EventHandler	32	static
+ksz8463_driver.c:476:9:ksz8463TagFrame	24	static
+ksz8463_driver.c:528:9:ksz8463UntagFrame	24	static
+ksz8463_driver.c:573:6:ksz8463WritePhyReg	24	static
+ksz8463_driver.c:589:10:ksz8463ReadPhyReg	16	static
+ksz8463_driver.c:603:6:ksz8463DumpPhyReg	24	static
+ksz8463_driver.c:627:6:ksz8463WriteSwitchReg	24	static
+ksz8463_driver.c:677:10:ksz8463ReadSwitchReg	24	static
+ksz8463_driver.c:729:6:ksz8463DumpSwitchReg	24	static

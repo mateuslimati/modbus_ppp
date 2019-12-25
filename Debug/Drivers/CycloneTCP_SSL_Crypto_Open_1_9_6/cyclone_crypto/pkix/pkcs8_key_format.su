@@ -1,0 +1,5 @@
+pkcs8_key_format.c:56:9:pkcs8FormatRsaPrivateKey	56	static
+pkcs8_key_format.c:98:9:pkcs8FormatDsaPrivateKey	56	static
+pkcs8_key_format.c:142:9:pkcs8FormatEcPrivateKey	64	static
+pkcs8_key_format.c:265:9:pkcs8FormatEcPublicKey	160	static
+pkcs8_key_format.c:340:9:pkcs8FormatEddsaPrivateKey	56	static

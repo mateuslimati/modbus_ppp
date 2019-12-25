@@ -1,0 +1,8 @@
+path.c:42:8:pathIsAbsolute	16	static
+path.c:58:8:pathIsRelative	16	static
+path.c:74:15:pathFindFileName	24	static
+path.c:113:6:pathCanonicalize	32	static
+path.c:275:6:pathAddSlash	24	static
+path.c:303:6:pathRemoveSlash	24	static
+path.c:333:6:pathCombine	32	static
+path.c:371:8:pathMatch	40	static

@@ -1,0 +1,14 @@
+ip.c:59:9:ipSendDatagram	40	static
+ip.c:109:9:ipSelectSourceAddr	32	static
+ip.c:158:8:ipCompAddr	24	static
+ip.c:209:8:ipIsUnspecifiedAddr	24	static
+ip.c:254:8:ipIsMulticastAddr	24	static
+ip.c:293:9:ipJoinMulticastGroup	24	static
+ip.c:343:9:ipLeaveMulticastGroup	24	static
+ip.c:392:10:ipCalcChecksum	32	static
+ip.c:512:10:ipCalcChecksumEx	48	static
+ip.c:585:10:ipCalcUpperLayerChecksum	32	static
+ip.c:612:10:ipCalcUpperLayerChecksumEx	32	static
+ip.c:637:12:ipAllocBuffer	24	static
+ip.c:682:9:ipStringToAddr	24	static
+ip.c:726:9:ipAddrToString	16	static

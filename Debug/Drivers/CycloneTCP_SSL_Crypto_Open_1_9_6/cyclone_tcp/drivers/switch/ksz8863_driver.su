@@ -1,0 +1,14 @@
+ksz8863_driver.c:75:9:ksz8863Init	24	static
+ksz8863_driver.c:174:8:ksz8863GetLinkState	24	static
+ksz8863_driver.c:222:6:ksz8863Tick	32	static
+ksz8863_driver.c:317:6:ksz8863EnableIrq	16	static
+ksz8863_driver.c:327:6:ksz8863DisableIrq	16	static
+ksz8863_driver.c:337:6:ksz8863EventHandler	32	static
+ksz8863_driver.c:480:9:ksz8863TagFrame	24	static
+ksz8863_driver.c:532:9:ksz8863UntagFrame	24	static
+ksz8863_driver.c:577:6:ksz8863WritePhyReg	24	static
+ksz8863_driver.c:593:10:ksz8863ReadPhyReg	16	static
+ksz8863_driver.c:607:6:ksz8863DumpPhyReg	24	static
+ksz8863_driver.c:631:6:ksz8863WriteSwitchReg	32	static
+ksz8863_driver.c:678:9:ksz8863ReadSwitchReg	24	static
+ksz8863_driver.c:726:6:ksz8863DumpSwitchReg	24	static

@@ -1,0 +1,8 @@
+dp83822_driver.c:62:9:dp83822Init	16	static
+dp83822_driver.c:113:6:dp83822Tick	24	static
+dp83822_driver.c:151:6:dp83822EnableIrq	16	static
+dp83822_driver.c:166:6:dp83822DisableIrq	16	static
+dp83822_driver.c:181:6:dp83822EventHandler	24	static
+dp83822_driver.c:234:6:dp83822WritePhyReg	24	static
+dp83822_driver.c:250:10:dp83822ReadPhyReg	16	static
+dp83822_driver.c:263:6:dp83822DumpPhyReg	24	static

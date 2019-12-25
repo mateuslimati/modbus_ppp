@@ -1,0 +1,11 @@
+tls13_client_extensions.c:54:9:tls13FormatCookieExtension	40	static
+tls13_client_extensions.c:108:9:tls13FormatClientKeyShareExtension	48	static
+tls13_client_extensions.c:217:9:tls13FormatPskKeModesExtension	40	static
+tls13_client_extensions.c:278:9:tls13FormatClientPreSharedKeyExtension	72	static
+tls13_client_extensions.c:442:9:tls13FormatClientEarlyDataExtension	32	static
+tls13_client_extensions.c:482:9:tls13ParseServerSupportedVersionsExtension	32	static
+tls13_client_extensions.c:518:9:tls13ParseCookieExtension	24	static
+tls13_client_extensions.c:570:9:tls13ParseSelectedGroupExtension	24	static
+tls13_client_extensions.c:619:9:tls13ParseServerKeyShareExtension	32	static
+tls13_client_extensions.c:700:9:tls13ParseServerPreSharedKeyExtension	24	static
+tls13_client_extensions.c:793:9:tls13ParseServerEarlyDataExtension	24	static

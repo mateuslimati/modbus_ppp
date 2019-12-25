@@ -1,0 +1,8 @@
+ksz8031_driver.c:62:9:ksz8031Init	16	static
+ksz8031_driver.c:110:6:ksz8031Tick	24	static
+ksz8031_driver.c:148:6:ksz8031EnableIrq	16	static
+ksz8031_driver.c:163:6:ksz8031DisableIrq	16	static
+ksz8031_driver.c:178:6:ksz8031EventHandler	24	static
+ksz8031_driver.c:254:6:ksz8031WritePhyReg	24	static
+ksz8031_driver.c:270:10:ksz8031ReadPhyReg	16	static
+ksz8031_driver.c:283:6:ksz8031DumpPhyReg	24	static

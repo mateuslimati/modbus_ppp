@@ -1,0 +1,8 @@
+ar8031_driver.c:62:9:ar8031Init	16	static
+ar8031_driver.c:132:6:ar8031Tick	24	static
+ar8031_driver.c:170:6:ar8031EnableIrq	16	static
+ar8031_driver.c:185:6:ar8031DisableIrq	16	static
+ar8031_driver.c:200:6:ar8031EventHandler	24	static
+ar8031_driver.c:269:6:ar8031WritePhyReg	24	static
+ar8031_driver.c:285:10:ar8031ReadPhyReg	16	static
+ar8031_driver.c:298:6:ar8031DumpPhyReg	24	static

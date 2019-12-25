@@ -1,0 +1,5 @@
+x509_csr_create.c:60:9:x509CreateCsr	96	static
+x509_csr_create.c:152:9:x509FormatCertRequestInfo	72	static
+x509_csr_create.c:236:9:x509FormatAttributes	64	static
+x509_csr_create.c:299:9:x509FormatChallengePassword	64	static
+x509_csr_create.c:389:9:x509FormatExtensionRequest	72	static

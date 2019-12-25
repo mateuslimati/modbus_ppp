@@ -1,0 +1,5 @@
+coap_debug.c:123:9:coapDumpMessage	16	static
+coap_debug.c:183:9:coapDumpMessageHeader	32	static
+coap_debug.c:235:9:coapDumpOptions	56	static
+coap_debug.c:289:9:coapDumpOption	16	static
+coap_debug.c:401:15:coapGetParamName	32	static

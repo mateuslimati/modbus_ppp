@@ -1,0 +1,5 @@
+coap_client_block.c:53:9:coapClientSetTxBlockSize	24	static
+coap_client_block.c:97:9:coapClientSetRxBlockSize	24	static
+coap_client_block.c:144:9:coapClientWriteBody	64	static
+coap_client_block.c:359:9:coapClientReadBody	64	static
+coap_client_block.c:553:15:coapClientGetMaxBlockSize	16	static

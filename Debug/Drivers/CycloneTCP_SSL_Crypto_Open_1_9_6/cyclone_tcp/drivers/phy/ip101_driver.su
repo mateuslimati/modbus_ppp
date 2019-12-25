@@ -1,0 +1,8 @@
+ip101_driver.c:62:9:ip101Init	16	static
+ip101_driver.c:100:6:ip101Tick	24	static
+ip101_driver.c:134:6:ip101EnableIrq	16	static
+ip101_driver.c:144:6:ip101DisableIrq	16	static
+ip101_driver.c:154:6:ip101EventHandler	24	static
+ip101_driver.c:218:6:ip101WritePhyReg	24	static
+ip101_driver.c:234:10:ip101ReadPhyReg	16	static
+ip101_driver.c:247:6:ip101DumpPhyReg	24	static

@@ -1,0 +1,12 @@
+dp83tc811_driver.c:62:9:dp83tc811Init	16	static
+dp83tc811_driver.c:106:6:dp83tc811Tick	24	static
+dp83tc811_driver.c:144:6:dp83tc811EnableIrq	16	static
+dp83tc811_driver.c:159:6:dp83tc811DisableIrq	16	static
+dp83tc811_driver.c:174:6:dp83tc811EventHandler	24	static
+dp83tc811_driver.c:210:6:dp83tc811WritePhyReg	24	static
+dp83tc811_driver.c:226:10:dp83tc811ReadPhyReg	16	static
+dp83tc811_driver.c:239:6:dp83tc811DumpPhyReg	24	static
+dp83tc811_driver.c:263:6:dp83tc811WriteMmdReg	16	static
+dp83tc811_driver.c:289:10:dp83tc811ReadMmdReg	16	static
+dp83tc811_driver.c:314:6:dp83tc811WriteMmd1Reg	16	static
+dp83tc811_driver.c:340:10:dp83tc811ReadMmd1Reg	16	static

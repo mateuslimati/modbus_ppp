@@ -1,0 +1,14 @@
+ksz9563_driver.c:75:9:ksz9563Init	24	static
+ksz9563_driver.c:188:8:ksz9563GetLinkState	24	static
+ksz9563_driver.c:226:6:ksz9563Tick	32	static
+ksz9563_driver.c:307:6:ksz9563EnableIrq	16	static
+ksz9563_driver.c:317:6:ksz9563DisableIrq	16	static
+ksz9563_driver.c:327:6:ksz9563EventHandler	32	static
+ksz9563_driver.c:475:9:ksz9563TagFrame	24	static
+ksz9563_driver.c:527:9:ksz9563UntagFrame	24	static
+ksz9563_driver.c:572:6:ksz9563WritePhyReg	32	static
+ksz9563_driver.c:617:10:ksz9563ReadPhyReg	24	static
+ksz9563_driver.c:664:6:ksz9563DumpPhyReg	24	static
+ksz9563_driver.c:688:6:ksz9563WriteSwitchReg	24	static
+ksz9563_driver.c:731:9:ksz9563ReadSwitchReg	24	static
+ksz9563_driver.c:776:6:ksz9563DumpSwitchReg	24	static

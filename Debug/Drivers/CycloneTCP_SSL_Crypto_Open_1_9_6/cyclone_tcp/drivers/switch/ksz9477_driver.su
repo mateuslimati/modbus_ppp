@@ -1,0 +1,14 @@
+ksz9477_driver.c:78:9:ksz9477Init	24	static
+ksz9477_driver.c:178:8:ksz9477GetLinkState	24	static
+ksz9477_driver.c:216:6:ksz9477Tick	32	static
+ksz9477_driver.c:297:6:ksz9477EnableIrq	16	static
+ksz9477_driver.c:307:6:ksz9477DisableIrq	16	static
+ksz9477_driver.c:317:6:ksz9477EventHandler	32	static
+ksz9477_driver.c:465:9:ksz9477TagFrame	24	static
+ksz9477_driver.c:517:9:ksz9477UntagFrame	24	static
+ksz9477_driver.c:562:6:ksz9477WritePhyReg	32	static
+ksz9477_driver.c:607:10:ksz9477ReadPhyReg	24	static
+ksz9477_driver.c:654:6:ksz9477DumpPhyReg	24	static
+ksz9477_driver.c:678:6:ksz9477WriteSwitchReg	24	static
+ksz9477_driver.c:721:9:ksz9477ReadSwitchReg	24	static
+ksz9477_driver.c:766:6:ksz9477DumpSwitchReg	24	static

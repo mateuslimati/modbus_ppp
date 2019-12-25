@@ -1,0 +1,4 @@
+bcrypt.c:55:9:bcryptHashPassword	56	static
+bcrypt.c:90:9:bcryptVerifyPassword	128	static
+bcrypt.c:158:9:bcrypt	88	static
+bcrypt.c:243:9:eksBlowfishSetup	48	static

@@ -1,0 +1,8 @@
+dp83848_driver.c:62:9:dp83848Init	16	static
+dp83848_driver.c:113:6:dp83848Tick	24	static
+dp83848_driver.c:151:6:dp83848EnableIrq	16	static
+dp83848_driver.c:166:6:dp83848DisableIrq	16	static
+dp83848_driver.c:181:6:dp83848EventHandler	24	static
+dp83848_driver.c:234:6:dp83848WritePhyReg	24	static
+dp83848_driver.c:250:10:dp83848ReadPhyReg	16	static
+dp83848_driver.c:263:6:dp83848DumpPhyReg	24	static

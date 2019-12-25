@@ -1,0 +1,12 @@
+mqtt_client_misc.c:52:6:mqttClientChangeState	16	static
+mqtt_client_misc.c:66:9:mqttClientProcessEvents	32	static
+mqtt_client_misc.c:156:9:mqttClientCheckKeepAlive	32	static
+mqtt_client_misc.c:221:9:mqttSerializeHeader	40	static
+mqtt_client_misc.c:290:9:mqttSerializeByte	32	static
+mqtt_client_misc.c:322:9:mqttSerializeShort	32	static
+mqtt_client_misc.c:356:9:mqttSerializeString	32	static
+mqtt_client_misc.c:393:9:mqttSerializeData	32	static
+mqtt_client_misc.c:429:9:mqttDeserializeHeader	40	static
+mqtt_client_misc.c:507:9:mqttDeserializeByte	32	static
+mqtt_client_misc.c:539:9:mqttDeserializeShort	32	static
+mqtt_client_misc.c:572:9:mqttDeserializeString	32	static

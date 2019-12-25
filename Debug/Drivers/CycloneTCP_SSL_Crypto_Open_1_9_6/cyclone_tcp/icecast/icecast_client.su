@@ -1,0 +1,8 @@
+icecast_client.c:49:6:icecastClientGetDefaultSettings	16	static
+icecast_client.c:73:9:icecastClientInit	24	static
+icecast_client.c:160:9:icecastClientStart	32	static
+icecast_client.c:190:9:icecastClientReadStream	32	static
+icecast_client.c:263:9:icecastClientReadMetadata	24	static
+icecast_client.c:291:6:icecastClientTask	48	static
+icecast_client.c:432:9:icecastClientConnect	192	static
+icecast_client.c:598:9:icecastClientProcessMetadata	40	static

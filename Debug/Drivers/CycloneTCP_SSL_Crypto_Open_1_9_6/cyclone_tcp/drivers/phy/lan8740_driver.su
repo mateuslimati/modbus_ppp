@@ -1,0 +1,8 @@
+lan8740_driver.c:62:9:lan8740Init	16	static
+lan8740_driver.c:110:6:lan8740Tick	24	static
+lan8740_driver.c:148:6:lan8740EnableIrq	16	static
+lan8740_driver.c:163:6:lan8740DisableIrq	16	static
+lan8740_driver.c:178:6:lan8740EventHandler	24	static
+lan8740_driver.c:254:6:lan8740WritePhyReg	24	static
+lan8740_driver.c:270:10:lan8740ReadPhyReg	16	static
+lan8740_driver.c:283:6:lan8740DumpPhyReg	24	static

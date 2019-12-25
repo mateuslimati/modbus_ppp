@@ -1,0 +1,8 @@
+lan8710_driver.c:62:9:lan8710Init	16	static
+lan8710_driver.c:110:6:lan8710Tick	24	static
+lan8710_driver.c:148:6:lan8710EnableIrq	16	static
+lan8710_driver.c:163:6:lan8710DisableIrq	16	static
+lan8710_driver.c:178:6:lan8710EventHandler	24	static
+lan8710_driver.c:254:6:lan8710WritePhyReg	24	static
+lan8710_driver.c:270:10:lan8710ReadPhyReg	16	static
+lan8710_driver.c:283:6:lan8710DumpPhyReg	24	static

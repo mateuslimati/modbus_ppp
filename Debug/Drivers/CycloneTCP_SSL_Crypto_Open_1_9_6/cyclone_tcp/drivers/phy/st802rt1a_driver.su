@@ -1,0 +1,8 @@
+st802rt1a_driver.c:62:9:st802rt1aInit	16	static
+st802rt1a_driver.c:100:6:st802rt1aTick	24	static
+st802rt1a_driver.c:134:6:st802rt1aEnableIrq	16	static
+st802rt1a_driver.c:144:6:st802rt1aDisableIrq	16	static
+st802rt1a_driver.c:154:6:st802rt1aEventHandler	24	static
+st802rt1a_driver.c:228:6:st802rt1aWritePhyReg	24	static
+st802rt1a_driver.c:244:10:st802rt1aReadPhyReg	16	static
+st802rt1a_driver.c:257:6:st802rt1aDumpPhyReg	24	static

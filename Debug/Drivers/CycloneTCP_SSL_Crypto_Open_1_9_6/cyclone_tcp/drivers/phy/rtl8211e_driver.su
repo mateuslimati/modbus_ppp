@@ -1,0 +1,8 @@
+rtl8211e_driver.c:62:9:rtl8211eInit	16	static
+rtl8211e_driver.c:110:6:rtl8211eTick	24	static
+rtl8211e_driver.c:148:6:rtl8211eEnableIrq	16	static
+rtl8211e_driver.c:163:6:rtl8211eDisableIrq	16	static
+rtl8211e_driver.c:178:6:rtl8211eEventHandler	24	static
+rtl8211e_driver.c:252:6:rtl8211eWritePhyReg	24	static
+rtl8211e_driver.c:268:10:rtl8211eReadPhyReg	16	static
+rtl8211e_driver.c:281:6:rtl8211eDumpPhyReg	24	static

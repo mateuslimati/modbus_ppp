@@ -1,0 +1,10 @@
+coap_client_misc.c:57:9:coapClientProcessEvents	40	static
+coap_client_misc.c:195:9:coapClientProcessRequestEvents	32	static
+coap_client_misc.c:339:9:coapClientChangeRequestState	32	static
+coap_client_misc.c:429:9:coapClientMatchResponse	32	static
+coap_client_misc.c:567:9:coapClientProcessResponse	32	static
+coap_client_misc.c:655:9:coapClientRejectResponse	24	static
+coap_client_misc.c:700:9:coapClientSendAck	24	static
+coap_client_misc.c:733:9:coapClientSendReset	24	static
+coap_client_misc.c:765:6:coapClientGenerateMessageId	16	static
+coap_client_misc.c:783:6:coapClientGenerateToken	24	static

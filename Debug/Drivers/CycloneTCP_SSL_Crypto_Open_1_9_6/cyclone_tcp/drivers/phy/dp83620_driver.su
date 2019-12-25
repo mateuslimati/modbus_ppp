@@ -1,0 +1,8 @@
+dp83620_driver.c:62:9:dp83620Init	16	static
+dp83620_driver.c:113:6:dp83620Tick	24	static
+dp83620_driver.c:151:6:dp83620EnableIrq	16	static
+dp83620_driver.c:166:6:dp83620DisableIrq	16	static
+dp83620_driver.c:181:6:dp83620EventHandler	24	static
+dp83620_driver.c:234:6:dp83620WritePhyReg	24	static
+dp83620_driver.c:250:10:dp83620ReadPhyReg	16	static
+dp83620_driver.c:263:6:dp83620DumpPhyReg	24	static

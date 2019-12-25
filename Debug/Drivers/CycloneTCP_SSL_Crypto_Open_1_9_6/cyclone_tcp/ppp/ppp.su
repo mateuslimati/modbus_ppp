@@ -1,0 +1,16 @@
+ppp.c:96:6:pppGetDefaultSettings	16	static
+ppp.c:122:9:pppInit	32	static
+ppp.c:197:9:pppSetTimeout	24	static
+ppp.c:233:9:pppSetAuthInfo	32	static
+ppp.c:271:8:pppCheckPassword	24	static
+ppp.c:318:9:pppSendAtCommand	32	static
+ppp.c:381:9:pppReceiveAtCommand	40	static
+ppp.c:459:9:pppConnect	32	static
+ppp.c:727:9:pppClose	32	static
+ppp.c:846:6:pppTick	24	static
+ppp.c:889:6:pppProcessFrame	40	static
+ppp.c:1006:9:pppSendFrame	40	static
+ppp.c:1108:8:pppParseFrameHeader	32	static
+ppp.c:1180:10:pppCalcFcs	24	static
+ppp.c:1208:10:pppCalcFcsEx	40	static
+ppp.c:1265:12:pppAllocBuffer	24	static

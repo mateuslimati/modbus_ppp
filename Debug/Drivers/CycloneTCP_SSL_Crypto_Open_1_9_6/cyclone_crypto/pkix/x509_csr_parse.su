@@ -1,0 +1,6 @@
+x509_csr_parse.c:55:9:x509ParseCsr	64	static
+x509_csr_parse.c:131:9:x509ParseCertRequestInfo	64	static
+x509_csr_parse.c:214:9:x509ParseAttributes	72	static
+x509_csr_parse.c:303:9:x509ParseAttribute	56	static
+x509_csr_parse.c:365:9:x509ParseChallengePassword	56	static
+x509_csr_parse.c:397:9:x509ParseExtensionRequest	80	static

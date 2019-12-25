@@ -1,0 +1,8 @@
+smtp_client_transport.c:50:9:smtpClientOpenConnection	24	static
+smtp_client_transport.c:86:9:smtpClientEstablishConnection	24	static
+smtp_client_transport.c:100:9:smtpClientOpenSecureConnection	16	static
+smtp_client_transport.c:161:9:smtpClientEstablishSecureConnection	16	static
+smtp_client_transport.c:191:9:smtpClientShutdownConnection	24	static
+smtp_client_transport.c:228:6:smtpClientCloseConnection	16	static
+smtp_client_transport.c:258:9:smtpClientSendData	40	static
+smtp_client_transport.c:292:9:smtpClientReceiveData	40	static

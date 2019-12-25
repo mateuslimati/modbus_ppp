@@ -1,0 +1,8 @@
+ksz8091_driver.c:62:9:ksz8091Init	16	static
+ksz8091_driver.c:110:6:ksz8091Tick	24	static
+ksz8091_driver.c:148:6:ksz8091EnableIrq	16	static
+ksz8091_driver.c:163:6:ksz8091DisableIrq	16	static
+ksz8091_driver.c:178:6:ksz8091EventHandler	24	static
+ksz8091_driver.c:254:6:ksz8091WritePhyReg	24	static
+ksz8091_driver.c:270:10:ksz8091ReadPhyReg	16	static
+ksz8091_driver.c:283:6:ksz8091DumpPhyReg	24	static

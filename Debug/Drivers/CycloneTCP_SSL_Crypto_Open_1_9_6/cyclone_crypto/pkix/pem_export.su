@@ -1,0 +1,15 @@
+pem_export.c:58:9:pemExportCertificate	40	static
+pem_export.c:91:9:pemExportCrl	40	static
+pem_export.c:124:9:pemExportCsr	40	static
+pem_export.c:156:9:pemExportRsaPublicKey	120	static
+pem_export.c:209:9:pemExportRsaPrivateKey	152	static
+pem_export.c:313:9:pemExportRsaPssPublicKey	120	static
+pem_export.c:366:9:pemExportRsaPssPrivateKey	152	static
+pem_export.c:470:9:pemExportDsaPublicKey	120	static
+pem_export.c:523:9:pemExportDsaPrivateKey	192	static
+pem_export.c:633:9:pemExportEcParameters	64	static
+pem_export.c:685:9:pemExportEcPublicKey	120	static
+pem_export.c:742:9:pemExportEcPrivateKey	152	static
+pem_export.c:850:9:pemExportEddsaPublicKey	24	static
+pem_export.c:904:9:pemExportEddsaPrivateKey	24	static
+pem_export.c:1009:9:pemEncodeFile	48	static

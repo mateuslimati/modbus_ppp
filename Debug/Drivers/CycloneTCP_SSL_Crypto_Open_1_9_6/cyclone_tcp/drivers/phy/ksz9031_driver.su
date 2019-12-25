@@ -1,0 +1,8 @@
+ksz9031_driver.c:62:9:ksz9031Init	16	static
+ksz9031_driver.c:110:6:ksz9031Tick	24	static
+ksz9031_driver.c:148:6:ksz9031EnableIrq	16	static
+ksz9031_driver.c:163:6:ksz9031DisableIrq	16	static
+ksz9031_driver.c:178:6:ksz9031EventHandler	24	static
+ksz9031_driver.c:252:6:ksz9031WritePhyReg	24	static
+ksz9031_driver.c:268:10:ksz9031ReadPhyReg	16	static
+ksz9031_driver.c:281:6:ksz9031DumpPhyReg	24	static

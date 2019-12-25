@@ -1,0 +1,8 @@
+tja1101_driver.c:62:9:tja1101Init	24	static
+tja1101_driver.c:126:6:tja1101Tick	24	static
+tja1101_driver.c:164:6:tja1101EnableIrq	16	static
+tja1101_driver.c:179:6:tja1101DisableIrq	16	static
+tja1101_driver.c:194:6:tja1101EventHandler	24	static
+tja1101_driver.c:230:6:tja1101WritePhyReg	24	static
+tja1101_driver.c:246:10:tja1101ReadPhyReg	16	static
+tja1101_driver.c:259:6:tja1101DumpPhyReg	24	static

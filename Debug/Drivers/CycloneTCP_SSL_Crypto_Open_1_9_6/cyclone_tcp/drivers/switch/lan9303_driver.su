@@ -1,0 +1,16 @@
+lan9303_driver.c:62:9:lan9303Init	24	static
+lan9303_driver.c:165:8:lan9303GetLinkState	24	static
+lan9303_driver.c:199:6:lan9303Tick	32	static
+lan9303_driver.c:280:6:lan9303EnableIrq	16	static
+lan9303_driver.c:290:6:lan9303DisableIrq	16	static
+lan9303_driver.c:300:6:lan9303EventHandler	32	static
+lan9303_driver.c:445:9:lan9303TagFrame	24	static
+lan9303_driver.c:504:9:lan9303UntagFrame	24	static
+lan9303_driver.c:570:6:lan9303WritePhyReg	24	static
+lan9303_driver.c:586:10:lan9303ReadPhyReg	16	static
+lan9303_driver.c:600:6:lan9303DumpPhyReg	24	static
+lan9303_driver.c:624:6:lan9303WriteSysReg	40	static
+lan9303_driver.c:654:10:lan9303ReadSysReg	24	static
+lan9303_driver.c:684:6:lan9303DumpSysReg	24	static
+lan9303_driver.c:708:6:lan9303WriteSwitchReg	32	static
+lan9303_driver.c:745:10:lan9303ReadSwitchReg	24	static

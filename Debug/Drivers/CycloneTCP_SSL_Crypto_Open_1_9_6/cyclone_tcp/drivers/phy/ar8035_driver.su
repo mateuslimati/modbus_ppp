@@ -1,0 +1,8 @@
+ar8035_driver.c:62:9:ar8035Init	16	static
+ar8035_driver.c:128:6:ar8035Tick	24	static
+ar8035_driver.c:166:6:ar8035EnableIrq	16	static
+ar8035_driver.c:181:6:ar8035DisableIrq	16	static
+ar8035_driver.c:196:6:ar8035EventHandler	24	static
+ar8035_driver.c:265:6:ar8035WritePhyReg	24	static
+ar8035_driver.c:281:10:ar8035ReadPhyReg	16	static
+ar8035_driver.c:294:6:ar8035DumpPhyReg	24	static

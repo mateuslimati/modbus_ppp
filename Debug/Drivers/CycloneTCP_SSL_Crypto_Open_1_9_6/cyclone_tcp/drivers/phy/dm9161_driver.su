@@ -1,0 +1,8 @@
+dm9161_driver.c:62:9:dm9161Init	16	static
+dm9161_driver.c:110:6:dm9161Tick	24	static
+dm9161_driver.c:148:6:dm9161EnableIrq	16	static
+dm9161_driver.c:163:6:dm9161DisableIrq	16	static
+dm9161_driver.c:178:6:dm9161EventHandler	24	static
+dm9161_driver.c:281:6:dm9161WritePhyReg	24	static
+dm9161_driver.c:297:10:dm9161ReadPhyReg	16	static
+dm9161_driver.c:310:6:dm9161DumpPhyReg	24	static

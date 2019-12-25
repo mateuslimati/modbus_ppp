@@ -1,0 +1,11 @@
+pap.c:53:9:papStartAuth	16	static
+pap.c:87:9:papAbortAuth	16	static
+pap.c:110:6:papTick	24	static
+pap.c:149:6:papProcessPacket	24	static
+pap.c:214:9:papProcessAuthReq	40	static
+pap.c:330:9:papProcessAuthAck	24	static
+pap.c:387:9:papProcessAuthNak	24	static
+pap.c:422:9:papSendAuthReq	48	static
+pap.c:500:9:papSendAuthAck	40	static
+pap.c:551:9:papSendAuthNak	40	static
+pap.c:602:8:papCheckPassword	24	static

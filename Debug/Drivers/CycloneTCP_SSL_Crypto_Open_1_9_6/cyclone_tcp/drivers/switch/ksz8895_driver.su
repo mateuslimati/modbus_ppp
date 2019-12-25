@@ -1,0 +1,14 @@
+ksz8895_driver.c:77:9:ksz8895Init	24	static
+ksz8895_driver.c:178:8:ksz8895GetLinkState	24	static
+ksz8895_driver.c:212:6:ksz8895Tick	32	static
+ksz8895_driver.c:294:6:ksz8895EnableIrq	16	static
+ksz8895_driver.c:304:6:ksz8895DisableIrq	16	static
+ksz8895_driver.c:314:6:ksz8895EventHandler	32	static
+ksz8895_driver.c:462:9:ksz8895TagFrame	24	static
+ksz8895_driver.c:514:9:ksz8895UntagFrame	24	static
+ksz8895_driver.c:559:6:ksz8895WritePhyReg	24	static
+ksz8895_driver.c:575:10:ksz8895ReadPhyReg	16	static
+ksz8895_driver.c:589:6:ksz8895DumpPhyReg	24	static
+ksz8895_driver.c:613:6:ksz8895WriteSwitchReg	32	static
+ksz8895_driver.c:660:9:ksz8895ReadSwitchReg	24	static
+ksz8895_driver.c:708:6:ksz8895DumpSwitchReg	24	static

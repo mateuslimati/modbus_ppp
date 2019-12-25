@@ -1,0 +1,15 @@
+modbus_server_misc.c:51:6:modbusServerTick	32	static
+modbus_server_misc.c:88:6:modbusServerProcessConnectionEvents	32	static
+modbus_server_misc.c:251:9:modbusServerParseMbapHeader	24	static
+modbus_server_misc.c:309:9:modbusServerFormatMbapHeader	24	static
+modbus_server_misc.c:360:7:modbusServerGetRequestPdu	24	static
+modbus_server_misc.c:385:7:modbusServerGetResponsePdu	16	static
+modbus_server_misc.c:397:6:modbusServerLock	24	static
+modbus_server_misc.c:418:6:modbusServerUnlock	24	static
+modbus_server_misc.c:442:9:modbusServerReadCoil	32	static
+modbus_server_misc.c:477:9:modbusServerReadDiscreteInput	32	static
+modbus_server_misc.c:520:9:modbusServerWriteCoil	40	static
+modbus_server_misc.c:555:9:modbusServerReadHoldingReg	32	static
+modbus_server_misc.c:596:9:modbusServerReadInputReg	32	static
+modbus_server_misc.c:639:9:modbusServerWriteReg	40	static
+modbus_server_misc.c:672:21:modbusServerTranslateExceptionCode	24	static

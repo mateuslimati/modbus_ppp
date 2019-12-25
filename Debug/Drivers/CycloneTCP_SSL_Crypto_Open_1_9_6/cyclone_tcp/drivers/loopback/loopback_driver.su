@@ -1,0 +1,8 @@
+loopback_driver.c:78:9:loopbackDriverInit	16	static
+loopback_driver.c:109:6:loopbackDriverTick	16	static
+loopback_driver.c:120:6:loopbackDriverEnableIrq	16	static
+loopback_driver.c:131:6:loopbackDriverDisableIrq	16	static
+loopback_driver.c:142:6:loopbackDriverEventHandler	16	static
+loopback_driver.c:175:9:loopbackDriverSendPacket	32	static
+loopback_driver.c:233:9:loopbackDriverReceivePacket	24	static
+loopback_driver.c:271:9:loopbackDriverUpdateMacAddrFilter	16	static

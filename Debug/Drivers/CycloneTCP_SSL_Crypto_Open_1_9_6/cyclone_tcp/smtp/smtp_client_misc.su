@@ -1,0 +1,7 @@
+smtp_client_misc.c:54:6:smtpClientChangeState	16	static
+smtp_client_misc.c:72:9:smtpClientSendCommand	40	static
+smtp_client_misc.c:190:9:smtpClientFormatCommand	24	static
+smtp_client_misc.c:258:9:smtpClientParseEhloReply	24	static
+smtp_client_misc.c:339:9:smtpClientFormatMailHeader	48	static
+smtp_client_misc.c:499:9:smtpClientFormatMultipartHeader	32	static
+smtp_client_misc.c:584:9:smtpClientCheckTimeout	16	static

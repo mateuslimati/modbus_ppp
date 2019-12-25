@@ -1,0 +1,16 @@
+smtp_client.c:61:9:smtpClientInit	16	static
+smtp_client.c:126:9:smtpClientSetTimeout	16	static
+smtp_client.c:147:9:smtpClientBindToInterface	16	static
+smtp_client.c:171:9:smtpClientConnect	40	static
+smtp_client.c:431:9:smtpClientLogin	32	static
+smtp_client.c:484:9:smtpClientSetContentType	24	static
+smtp_client.c:520:9:smtpClientSetMultipartBoundary	24	static
+smtp_client.c:559:9:smtpClientWriteMailHeader	40	static
+smtp_client.c:727:9:smtpClientWriteMailBody	40	static
+smtp_client.c:797:9:smtpClientWriteMultipartHeader	40	static
+smtp_client.c:934:9:smtpClientWriteMultipartBody	48	static
+smtp_client.c:1081:9:smtpClientCloseMailBody	24	static
+smtp_client.c:1159:8:smtpClientGetReplyCode	24	static
+smtp_client.c:1186:9:smtpClientDisconnect	24	static
+smtp_client.c:1278:9:smtpClientClose	16	static
+smtp_client.c:1299:6:smtpClientDeinit	16	static

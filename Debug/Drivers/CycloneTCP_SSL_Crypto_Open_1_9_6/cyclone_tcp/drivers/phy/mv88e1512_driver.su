@@ -1,0 +1,8 @@
+mv88e1512_driver.c:62:9:mv88e1512Init	16	static
+mv88e1512_driver.c:100:6:mv88e1512Tick	24	static
+mv88e1512_driver.c:134:6:mv88e1512EnableIrq	16	static
+mv88e1512_driver.c:144:6:mv88e1512DisableIrq	16	static
+mv88e1512_driver.c:154:6:mv88e1512EventHandler	24	static
+mv88e1512_driver.c:216:6:mv88e1512WritePhyReg	24	static
+mv88e1512_driver.c:232:10:mv88e1512ReadPhyReg	16	static
+mv88e1512_driver.c:245:6:mv88e1512DumpPhyReg	24	static

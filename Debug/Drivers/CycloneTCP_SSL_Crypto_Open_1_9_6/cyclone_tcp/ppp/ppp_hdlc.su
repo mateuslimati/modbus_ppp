@@ -1,0 +1,16 @@
+ppp_hdlc.c:77:9:pppHdlcDriverInit	24	static
+ppp_hdlc.c:116:6:pppHdlcDriverTick	16	static
+ppp_hdlc.c:126:6:pppHdlcDriverEnableIrq	16	static
+ppp_hdlc.c:138:6:pppHdlcDriverDisableIrq	16	static
+ppp_hdlc.c:149:6:pppHdlcDriverEventHandler	24	static,ignoring_inline_asm
+ppp_hdlc.c:184:9:pppHdlcDriverSendPacket	56	static
+ppp_hdlc.c:293:9:pppHdlcDriverReceivePacket	40	static
+ppp_hdlc.c:375:9:pppHdlcDriverUpdateMacAddrFilter	16	static
+ppp_hdlc.c:389:9:pppHdlcDriverSendAtCommand	24	static
+ppp_hdlc.c:424:9:pppHdlcDriverReceiveAtCommand	48	static,ignoring_inline_asm
+ppp_hdlc.c:507:9:pppHdlcDriverPurgeTxBuffer	16	static,ignoring_inline_asm
+ppp_hdlc.c:531:9:pppHdlcDriverPurgeRxBuffer	16	static,ignoring_inline_asm
+ppp_hdlc.c:556:6:pppHdlcDriverWriteTxQueue	16	static,ignoring_inline_asm
+ppp_hdlc.c:580:9:pppHdlcDriverReadRxQueue	24	static,ignoring_inline_asm
+ppp_hdlc.c:610:8:pppHdlcDriverReadTxQueue	24	static
+ppp_hdlc.c:657:8:pppHdlcDriverWriteRxQueue	24	static
