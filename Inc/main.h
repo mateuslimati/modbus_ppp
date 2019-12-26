@@ -52,10 +52,13 @@ extern "C" {
 //PPP interface configuration
 #define APP_IF_NAME "ppp0"
 
+#define APP_IPV4_HOST_ADDR "192.168.0.2"
+#define APP_IPV4_SUBNET_MASK "255.255.255.0"
+#define APP_IPV4_DEFAULT_GATEWAY "192.168.0.1"
+
 //Application configuration
-#define APP_HTTP_SERVER_NAME "www.httpbin.org"
-#define APP_HTTP_SERVER_PORT 80
-#define APP_HTTP_URI "/anything"
+#define APP_MODBUS_SERVER_NAME "192.168.0.1"
+#define APP_MODBUS_SERVER_PORT 502
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);

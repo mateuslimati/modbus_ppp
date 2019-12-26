@@ -1,6 +1,6 @@
-net_mem.c:70:9:memPoolInit	4	static
+net_mem.c:70:9:memPoolInit	8	static
 net_mem.c:100:7:memPoolAlloc	24	static
-net_mem.c:166:6:memPoolFree	16	static
+net_mem.c:166:6:memPoolFree	24	static
 net_mem.c:207:6:memPoolGetStats	24	static
 net_mem.c:243:12:netBufferAlloc	24	static
 net_mem.c:282:6:netBufferFree	16	static

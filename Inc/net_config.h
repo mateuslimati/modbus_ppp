@@ -165,4 +165,6 @@
 //CHAP authentication support
 #define CHAP_SUPPORT ENABLED
 
+#define NET_MEM_POOL_SUPPORT ENABLED
+
 #endif

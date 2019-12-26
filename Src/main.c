@@ -45,13 +45,11 @@
 
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef hlpuart1;
-UART_HandleTypeDef huart2;
-DMA_HandleTypeDef hdma_usart2_rx;
 PppSettings pppSettings;
 PppContext pppContext;
 osThreadId TaskHandle;
 /* USER CODE BEGIN PV */
-
+ModbusClientContext modbusClientContext;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +57,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_LPUART1_UART_Init(void);
 void mainTask(void const * argument);
+void modbusTask(void const * argument);
 void ledBlueTask(void const * argument);
 void ledRedTask(void const * argument);
 
@@ -77,8 +76,8 @@ void ledRedTask(void const * argument);
  */
 int main(void) {
 	/* USER CODE BEGIN 1 */
-	error_t error;
 	NetInterface *interface;
+	Ipv4Addr ipv4Addr;
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -104,22 +103,16 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 
 	//TCP/IP stack initialization
-	error = netInit();
+	netInit();
 
 	//Configure the first network interface
 	interface = &netInterface[0];
 
 	//Get default PPP settings
 	pppGetDefaultSettings(&pppSettings);
-	//Select the underlying interface
-	pppSettings.interface = interface;
-	//Default async control character map
-	pppSettings.accm = 0x00000000;
-	//Allowed authentication protocols
-	pppSettings.authProtocol = PPP_AUTH_PROTOCOL_PAP
-			| PPP_AUTH_PROTOCOL_CHAP_MD5;
+
 	//Initialize PPP
-	error = pppInit(&pppContext, &pppSettings);
+	pppInit(&pppContext, &pppSettings);
 
 	//Set interface name
 	netSetInterfaceName(interface, APP_IF_NAME);
@@ -127,7 +120,19 @@ int main(void) {
 	netSetUartDriver(interface, &uartDriver);
 
 	//Initialize network interface
-	error = netConfigInterface(interface);
+	netConfigInterface(interface);
+
+	//Set IPv4 host address
+	ipv4StringToAddr(APP_IPV4_HOST_ADDR, &ipv4Addr);
+	ipv4SetHostAddr(interface, ipv4Addr);
+
+	//Set subnet mask
+	ipv4StringToAddr(APP_IPV4_SUBNET_MASK, &ipv4Addr);
+	ipv4SetSubnetMask(interface, ipv4Addr);
+
+	//Set default gateway
+	ipv4StringToAddr(APP_IPV4_DEFAULT_GATEWAY, &ipv4Addr);
+	ipv4SetDefaultGateway(interface, ipv4Addr);
 
 	/* USER CODE END 2 */
 
@@ -153,6 +158,9 @@ int main(void) {
 	TaskHandle = osThreadCreate(osThread(osMainTask), NULL);
 
 	/* USER CODE BEGIN RTOS_THREADS */
+	osThreadDef(osModbusTask, modbusTask, osPriorityNormal, 0, 500);
+	TaskHandle = osThreadCreate(osThread(osModbusTask), NULL);
+
 	osThreadDef(osLedBlueTask, ledBlueTask, osPriorityNormal, 0, 32);
 	TaskHandle = osThreadCreate(osThread(osLedBlueTask), NULL);
 
@@ -301,7 +309,7 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOG,
-			USB_PowerSwitchOn_Pin | SMPS_V1_Pin | SMPS_EN_Pin | SMPS_SW_Pin,
+	USB_PowerSwitchOn_Pin | SMPS_V1_Pin | SMPS_EN_Pin | SMPS_SW_Pin,
 			GPIO_PIN_RESET);
 
 	/*Configure GPIO pin : B1_Pin */
@@ -348,10 +356,10 @@ void mainTask(void const * argument) {
 
 	/* init code for USB_HOST */
 	MX_USB_HOST_Init();
-
 	/* USER CODE BEGIN 5 */
 	/* Infinite loop */
 	for (;;) {
+		//Resolve Modbus/TCP server name
 	}
 	/* USER CODE END 5 */
 }
@@ -391,6 +399,38 @@ void ledRedTask(void const * argument) {
 }
 
 /**
+ * @brief  Function implementing the Task thread.
+ * @param  argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_mainTask */
+void modbusTask(void const * argument) {
+
+	/* USER CODE BEGIN 5 */
+	IpAddr ipAddr;
+	NetInterface *interface = &netInterface[0];
+
+	//Initialize Modbus/TCP client context
+	modbusClientInit(&modbusClientContext);
+
+    //Resolve Modbus/TCP server name
+	getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
+
+	modbusClientBindToInterface(&modbusClientContext, interface);
+
+    //Establish connection with the Modbus/TCP server
+	modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
+
+	//Close Modbus/TCP connection
+	modbusClientDisconnect(&modbusClientContext);
+
+	/* Infinite loop */
+	for (;;) {
+	}
+	/* USER CODE END 5 */
+}
+
+/**
  * @brief  This function is executed in case of error occurrence.
  * @retval None
  */
@@ -410,7 +450,7 @@ void Error_Handler(void) {
   * @retval None
   */
 void assert_failed(char *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
