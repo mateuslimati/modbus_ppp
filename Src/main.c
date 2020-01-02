@@ -111,6 +111,9 @@ int main(void) {
 	//Get default PPP settings
 	pppGetDefaultSettings(&pppSettings);
 
+	//Default async control character map
+	pppSettings.accm = 0x00000000;
+
 	//Initialize PPP
 	pppInit(&pppContext, &pppSettings);
 
@@ -408,18 +411,24 @@ void modbusTask(void const * argument) {
 
 	/* USER CODE BEGIN 5 */
 	IpAddr ipAddr;
+	uint8_t coilState[2];
 	NetInterface *interface = &netInterface[0];
+
+	//Establish a PPP connection
+	pppConnect(interface);
 
 	//Initialize Modbus/TCP client context
 	modbusClientInit(&modbusClientContext);
 
-    //Resolve Modbus/TCP server name
+	//Resolve Modbus/TCP server name
 	getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
 
 	modbusClientBindToInterface(&modbusClientContext, interface);
 
-    //Establish connection with the Modbus/TCP server
+	//Establish connection with the Modbus/TCP server
 	modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
+
+	modbusClientReadCoils(&modbusClientContext, 10000, 2, coilState);
 
 	//Close Modbus/TCP connection
 	modbusClientDisconnect(&modbusClientContext);
