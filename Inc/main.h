@@ -34,7 +34,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "ppp/ppp.h"
 #include "modbus/modbus_client.h"
-#include "uart_driver.h"
+#include "usb_driver.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

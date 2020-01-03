@@ -21,7 +21,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "usb_host.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -120,7 +119,7 @@ int main(void) {
 	//Set interface name
 	netSetInterfaceName(interface, APP_IF_NAME);
 	//Select the relevant UART driver
-	netSetUartDriver(interface, &uartDriver);
+	netSetUSBDriver(interface, &usbDriver);
 
 	//Initialize network interface
 	netConfigInterface(interface);
@@ -306,6 +305,11 @@ static void MX_GPIO_Init(void) {
 	__HAL_RCC_GPIOG_CLK_ENABLE()
 	;
 	HAL_PWREx_EnableVddIO2();
+	__HAL_RCC_GPIOA_CLK_ENABLE()
+	;
+
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14 | GPIO_PIN_7, GPIO_PIN_RESET);
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOB, LD3_Pin | LD2_Pin, GPIO_PIN_RESET);
@@ -315,6 +319,12 @@ static void MX_GPIO_Init(void) {
 	USB_PowerSwitchOn_Pin | SMPS_V1_Pin | SMPS_EN_Pin | SMPS_SW_Pin,
 			GPIO_PIN_RESET);
 
+	/*Configure GPIO pin : PC13 */
+	GPIO_InitStruct.Pin = GPIO_PIN_13;
+	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
 	/*Configure GPIO pin : B1_Pin */
 	GPIO_InitStruct.Pin = B1_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
@@ -323,6 +333,13 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pins : LD3_Pin LD2_Pin */
 	GPIO_InitStruct.Pin = LD3_Pin | LD2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	/*Configure GPIO pins : PB14 PB7 */
+	GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_7;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -357,11 +374,9 @@ static void MX_GPIO_Init(void) {
 /* USER CODE END Header_mainTask */
 void mainTask(void const * argument) {
 
-	/* init code for USB_HOST */
-	MX_USB_HOST_Init();
 	/* USER CODE BEGIN 5 */
 	/* Infinite loop */
-	for (;;) {
+ 	for (;;) {
 		//Resolve Modbus/TCP server name
 	}
 	/* USER CODE END 5 */
@@ -413,6 +428,10 @@ void modbusTask(void const * argument) {
 	IpAddr ipAddr;
 	uint8_t coilState[2];
 	NetInterface *interface = &netInterface[0];
+
+	/* init code for USB_DEVICE */
+	MX_USB_DEVICE_Init();
+	osDelay(400);
 
 	//Establish a PPP connection
 	pppConnect(interface);

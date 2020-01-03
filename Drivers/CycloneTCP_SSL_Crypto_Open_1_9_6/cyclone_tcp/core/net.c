@@ -792,6 +792,29 @@ error_t netSetUartDriver(NetInterface *interface, const UartDriver *driver)
    return NO_ERROR;
 }
 
+/**
+ * @brief Set UART driver
+ * @param[in] interface Pointer to the desired network interface
+ * @param[in] driver Underlying UART driver
+ * @return Error code
+ **/
+
+error_t netSetUSBDriver(NetInterface *interface, const USBDriver *driver)
+{
+   //Check parameters
+   if(interface == NULL || driver == NULL)
+      return ERROR_INVALID_PARAMETER;
+
+   //Get exclusive access
+   osAcquireMutex(&netMutex);
+   //Set UART driver
+   interface->usbDriver = driver;
+   //Release exclusive access
+   osReleaseMutex(&netMutex);
+
+   //Successful processing
+   return NO_ERROR;
+}
 
 /**
  * @brief Set external interrupt line driver

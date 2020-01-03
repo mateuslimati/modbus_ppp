@@ -166,6 +166,12 @@ typedef void (*UartEnableIrq)(void);
 typedef void (*UartDisableIrq)(void);
 typedef void (*UartStartTx)(void);
 
+//UART abstraction layer
+typedef error_t (*USBInit)(void);
+typedef void (*USBEnableIrq)(void);
+typedef void (*USBDisableIrq)(void);
+typedef void (*USBStartTx)(void);
+
 //External interrupt line abstraction layer
 typedef error_t (*ExtIntInit)(void);
 typedef void (*ExtIntEnableIrq)(void);
@@ -250,6 +256,18 @@ typedef struct
    UartStartTx startTx;
 } UartDriver;
 
+
+/**
+ * @brief USB driver
+ **/
+
+typedef struct
+{
+   USBInit init;
+   USBEnableIrq enableIrq;
+   USBDisableIrq disableIrq;
+   USBStartTx startTx;
+} USBDriver;
 
 /**
  * @brief External interrupt line driver

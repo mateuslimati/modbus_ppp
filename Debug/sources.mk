@@ -58,8 +58,8 @@ Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/sntp \
 Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/tftp \
 Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/web_socket \
 Drivers/STM32L4xx_HAL_Driver/Src \
-Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src \
-Middlewares/ST/STM32_USB_Host_Library/Core/Src \
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
 Middlewares/Third_Party/FreeRTOS/Source \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \

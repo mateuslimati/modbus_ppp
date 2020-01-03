@@ -199,6 +199,7 @@ struct _NetInterface
    uint8_t phyAddr;                               ///<PHY address
    const SpiDriver *spiDriver;                    ///<Underlying SPI driver
    const UartDriver *uartDriver;                  ///<Underlying UART driver
+   const USBDriver *usbDriver;                    ///<Underlying USB driver
    const ExtIntDriver *extIntDriver;              ///<External interrupt line driver
    uint8_t nicContext[NIC_CONTEXT_SIZE];          ///<Driver specific context
    OsEvent nicTxEvent;                            ///<Network controller TX event
@@ -328,6 +329,7 @@ error_t netSetPhyAddr(NetInterface *interface, uint8_t phyAddr);
 
 error_t netSetSpiDriver(NetInterface *interface, const SpiDriver *driver);
 error_t netSetUartDriver(NetInterface *interface, const UartDriver *driver);
+error_t netSetUSBDriver(NetInterface *interface, const USBDriver *driver);
 error_t netSetExtIntDriver(NetInterface *interface, const ExtIntDriver *driver);
 
 error_t netSetLinkState(NetInterface *interface, NicLinkState linkState);

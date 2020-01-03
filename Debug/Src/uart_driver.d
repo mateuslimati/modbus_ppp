@@ -29,8 +29,10 @@ Src/uart_driver.o: ../Src/uart_driver.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/common/os_port.h \
  ../Inc/os_port_config.h \
@@ -195,9 +197,13 @@ Src/uart_driver.o: ../Src/uart_driver.c \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h:
 
 ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h:
 
