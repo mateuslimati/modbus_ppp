@@ -36,7 +36,6 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/ppp/ppp.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/common/os_port.h \
@@ -218,8 +217,6 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o: \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
-
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h:
 
 ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/ppp/ppp.h:
 

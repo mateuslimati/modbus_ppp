@@ -375,6 +375,10 @@ static void MX_GPIO_Init(void) {
 void mainTask(void const * argument) {
 
 	/* USER CODE BEGIN 5 */
+
+	/* init code for USB_DEVICE */
+	MX_USB_DEVICE_Init();
+
 	/* Infinite loop */
  	for (;;) {
 		//Resolve Modbus/TCP server name
@@ -394,7 +398,6 @@ void ledBlueTask(void const * argument) {
 	/* Infinite loop */
 	for (;;) {
 		osDelay(200);
-		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	}
 	/* USER CODE END 5 */
 }
@@ -411,7 +414,6 @@ void ledRedTask(void const * argument) {
 	/* Infinite loop */
 	for (;;) {
 		osDelay(400);
-		HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 	}
 	/* USER CODE END 5 */
 }
@@ -429,31 +431,32 @@ void modbusTask(void const * argument) {
 	uint8_t coilState[2];
 	NetInterface *interface = &netInterface[0];
 
-	/* init code for USB_DEVICE */
-	MX_USB_DEVICE_Init();
-	osDelay(400);
-
-	//Establish a PPP connection
-	pppConnect(interface);
-
-	//Initialize Modbus/TCP client context
-	modbusClientInit(&modbusClientContext);
-
-	//Resolve Modbus/TCP server name
-	getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
-
-	modbusClientBindToInterface(&modbusClientContext, interface);
-
-	//Establish connection with the Modbus/TCP server
-	modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
-
-	modbusClientReadCoils(&modbusClientContext, 10000, 2, coilState);
-
-	//Close Modbus/TCP connection
-	modbusClientDisconnect(&modbusClientContext);
-
 	/* Infinite loop */
 	for (;;) {
+		if (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_SET)
+		{
+			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+			//Establish a PPP connection
+			pppConnect(interface);
+
+			//Initialize Modbus/TCP client context
+			modbusClientInit(&modbusClientContext);
+
+			//Resolve Modbus/TCP server name
+			getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
+
+			modbusClientBindToInterface(&modbusClientContext, interface);
+
+			//Establish connection with the Modbus/TCP server
+			modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
+
+			modbusClientReadCoils(&modbusClientContext, 10000, 2, coilState);
+
+			//Close Modbus/TCP connection
+			modbusClientDisconnect(&modbusClientContext);
+
+			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+		}
 	}
 	/* USER CODE END 5 */
 }

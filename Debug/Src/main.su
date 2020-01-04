@@ -3,7 +3,7 @@ main.c:193:6:SystemClock_Config	240	static
 main.c:263:13:MX_LPUART1_UART_Init	8	static
 main.c:295:13:MX_GPIO_Init	48	static
 main.c:375:6:mainTask	16	static
-main.c:391:6:ledBlueTask	16	static
-main.c:408:6:ledRedTask	16	static
-main.c:425:6:modbusTask	32	static
-main.c:465:6:Error_Handler	4	static
+main.c:395:6:ledBlueTask	16	static
+main.c:411:6:ledRedTask	16	static
+main.c:427:6:modbusTask	32	static
+main.c:468:6:Error_Handler	4	static
