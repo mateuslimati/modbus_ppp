@@ -257,7 +257,7 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len) {
 	bool_t flag;
 	NetInterface *interface;
 
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 
 	//Enter interrupt service routine
 	osEnterIsr();

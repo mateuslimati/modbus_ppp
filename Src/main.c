@@ -57,8 +57,6 @@ static void MX_GPIO_Init(void);
 static void MX_LPUART1_UART_Init(void);
 void mainTask(void const * argument);
 void modbusTask(void const * argument);
-void ledBlueTask(void const * argument);
-void ledRedTask(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -162,12 +160,6 @@ int main(void) {
 	/* USER CODE BEGIN RTOS_THREADS */
 	osThreadDef(osModbusTask, modbusTask, osPriorityNormal, 0, 500);
 	TaskHandle = osThreadCreate(osThread(osModbusTask), NULL);
-
-	osThreadDef(osLedBlueTask, ledBlueTask, osPriorityNormal, 0, 32);
-	TaskHandle = osThreadCreate(osThread(osLedBlueTask), NULL);
-
-	osThreadDef(osLedRedTask, ledRedTask, osPriorityNormal, 0, 32);
-	TaskHandle = osThreadCreate(osThread(osLedRedTask), NULL);
 
 	/* USER CODE END RTOS_THREADS */
 
@@ -392,38 +384,6 @@ void mainTask(void const * argument) {
  * @retval None
  */
 /* USER CODE END Header_mainTask */
-void ledBlueTask(void const * argument) {
-
-	/* USER CODE BEGIN 5 */
-	/* Infinite loop */
-	for (;;) {
-		osDelay(200);
-	}
-	/* USER CODE END 5 */
-}
-
-/**
- * @brief  Function implementing the Task thread.
- * @param  argument: Not used
- * @retval None
- */
-/* USER CODE END Header_mainTask */
-void ledRedTask(void const * argument) {
-
-	/* USER CODE BEGIN 5 */
-	/* Infinite loop */
-	for (;;) {
-		osDelay(400);
-	}
-	/* USER CODE END 5 */
-}
-
-/**
- * @brief  Function implementing the Task thread.
- * @param  argument: Not used
- * @retval None
- */
-/* USER CODE END Header_mainTask */
 void modbusTask(void const * argument) {
 
 	/* USER CODE BEGIN 5 */
@@ -435,7 +395,7 @@ void modbusTask(void const * argument) {
 	for (;;) {
 		if (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_SET)
 		{
-			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 			//Establish a PPP connection
 			pppConnect(interface);
 
@@ -455,7 +415,7 @@ void modbusTask(void const * argument) {
 			//Close Modbus/TCP connection
 			modbusClientDisconnect(&modbusClientContext);
 
-			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 		}
 	}
 	/* USER CODE END 5 */
