@@ -139,7 +139,7 @@ Src/usb_driver.o: ../Src/usb_driver.c \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/modbus_common.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h \
- ../Inc/usb_driver.h \
+ ../Inc/uart_driver.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/common/debug.h \
  ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/common/../../CycloneTCP_SSL_Crypto_Open_1_9_6/common/os_port.h
 
@@ -427,7 +427,7 @@ Src/usb_driver.o: ../Src/usb_driver.c \
 
 ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/modbus/../../../CycloneTCP_SSL_Crypto_Open_1_9_6/cyclone_tcp/core/net.h:
 
-../Inc/usb_driver.h:
+../Inc/uart_driver.h:
 
 ../Drivers/CycloneTCP_SSL_Crypto_Open_1_9_6/common/debug.h:
 

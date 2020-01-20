@@ -43,7 +43,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef hlpuart1;
 PppSettings pppSettings;
 PppContext pppContext;
 osThreadId TaskHandle;
@@ -95,9 +94,6 @@ int main(void) {
 
 	/* Initialize all configured peripherals */
 	MX_GPIO_Init();
-	MX_LPUART1_UART_Init();
-
-	/* USER CODE BEGIN 2 */
 
 	//TCP/IP stack initialization
 	netInit();
@@ -117,7 +113,7 @@ int main(void) {
 	//Set interface name
 	netSetInterfaceName(interface, APP_IF_NAME);
 	//Select the relevant UART driver
-	netSetUSBDriver(interface, &usbDriver);
+	netSetUartDriver(interface, &uartDriver);
 
 	//Initialize network interface
 	netConfigInterface(interface);
@@ -248,38 +244,6 @@ void SystemClock_Config(void) {
 }
 
 /**
- * @brief LPUART1 Initialization Function
- * @param None
- * @retval None
- */
-static void MX_LPUART1_UART_Init(void) {
-
-	/* USER CODE BEGIN LPUART1_Init 0 */
-
-	/* USER CODE END LPUART1_Init 0 */
-
-	/* USER CODE BEGIN LPUART1_Init 1 */
-
-	/* USER CODE END LPUART1_Init 1 */
-	hlpuart1.Instance = LPUART1;
-	hlpuart1.Init.BaudRate = 209700;
-	hlpuart1.Init.WordLength = UART_WORDLENGTH_7B;
-	hlpuart1.Init.StopBits = UART_STOPBITS_1;
-	hlpuart1.Init.Parity = UART_PARITY_NONE;
-	hlpuart1.Init.Mode = UART_MODE_TX_RX;
-	hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-	hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-	hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-	if (HAL_UART_Init(&hlpuart1) != HAL_OK) {
-		Error_Handler();
-	}
-	/* USER CODE BEGIN LPUART1_Init 2 */
-
-	/* USER CODE END LPUART1_Init 2 */
-
-}
-
-/**
  * @brief GPIO Initialization Function
  * @param None
  * @retval None
@@ -391,29 +355,27 @@ void modbusTask(void const * argument) {
 	uint8_t coilState[2];
 	NetInterface *interface = &netInterface[0];
 
+	//Establish a PPP connection
+	pppConnect(interface);
+
+	//Initialize Modbus/TCP client context
+	modbusClientInit(&modbusClientContext);
+
+	//Resolve Modbus/TCP server name
+	getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
+
+	modbusClientBindToInterface(&modbusClientContext, interface);
+
+	//Establish connection with the Modbus/TCP server
+	modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
+
 	/* Infinite loop */
 	for (;;) {
 		if (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_SET)
 		{
 			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-			//Establish a PPP connection
-			pppConnect(interface);
 
-			//Initialize Modbus/TCP client context
-			modbusClientInit(&modbusClientContext);
-
-			//Resolve Modbus/TCP server name
-			getHostByName(NULL, APP_MODBUS_SERVER_NAME, &ipAddr, 0);
-
-			modbusClientBindToInterface(&modbusClientContext, interface);
-
-			//Establish connection with the Modbus/TCP server
-			modbusClientConnect(&modbusClientContext, &ipAddr, APP_MODBUS_SERVER_PORT);
-
-			modbusClientReadCoils(&modbusClientContext, 10000, 2, coilState);
-
-			//Close Modbus/TCP connection
-			modbusClientDisconnect(&modbusClientContext);
+			modbusClientReadCoils(&modbusClientContext, 1, 2, coilState);
 
 			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 		}

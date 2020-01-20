@@ -1,7 +1,6 @@
-main.c:74:5:main	64	static
-main.c:185:6:SystemClock_Config	240	static
-main.c:255:13:MX_LPUART1_UART_Init	8	static
-main.c:287:13:MX_GPIO_Init	48	static
-main.c:367:6:mainTask	16	static
-main.c:387:6:modbusTask	32	static
-main.c:428:6:Error_Handler	4	static
+main.c:73:5:main	64	static
+main.c:181:6:SystemClock_Config	240	static
+main.c:251:13:MX_GPIO_Init	48	static
+main.c:331:6:mainTask	16	static
+main.c:351:6:modbusTask	32	static
+main.c:390:6:Error_Handler	4	static

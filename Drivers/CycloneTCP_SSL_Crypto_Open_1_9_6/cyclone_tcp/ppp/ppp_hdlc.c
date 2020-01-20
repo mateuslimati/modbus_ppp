@@ -94,7 +94,7 @@ error_t pppHdlcDriverInit(NetInterface *interface)
    context->rxFrameCount = 0;
 
    //Initialize USB
-   interface->usbDriver->init();
+   interface->uartDriver->init();
 
    //Accept any packets from the upper layer
    osSetEvent(&interface->nicTxEvent);
@@ -126,7 +126,7 @@ void pppHdlcDriverTick(NetInterface *interface)
 void pppHdlcDriverEnableIrq(NetInterface *interface)
 {
    //Enable USB interrupts
-   interface->usbDriver->enableIrq();
+   interface->uartDriver->enableIrq();
 }
 
 
@@ -270,7 +270,7 @@ error_t pppHdlcDriverSendPacket(NetInterface *interface,
    pppHdlcDriverWriteTxQueue(context, PPP_FLAG_CHAR);
 
    //Start transferring data
-   interface->usbDriver->startTx();
+   interface->uartDriver->startTx();
 
    //Check whether the TX queue is available for writing
    if(context->txBufferLen <= (PPP_TX_BUFFER_SIZE - 3006))
@@ -399,7 +399,7 @@ error_t pppHdlcDriverSendAtCommand(NetInterface *interface, const char_t *data)
       pppHdlcDriverWriteTxQueue(context, data[i]);
 
    //Start transferring data
-   interface->usbDriver->startTx();
+   interface->uartDriver->startTx();
 
    //Check whether the TX queue is available for writing
    if(context->txBufferLen <= (PPP_TX_BUFFER_SIZE - 3006))
